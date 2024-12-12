@@ -1,6 +1,6 @@
 package src;
 
-import enums.ActionLetter;
+import src.enums.ActionLetter ;
 import src.model.*;
 import util.UniversalArray;
 import util.UniversalArrayImpl;
