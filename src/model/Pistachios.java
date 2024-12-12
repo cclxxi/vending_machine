@@ -1,6 +1,7 @@
 package src.model;
 
-import enums.ActionLetter;
+
+import src.enums.ActionLetter;
 
 public class Pistachios extends Product {
     public Pistachios(ActionLetter actionLetter, int price) {
