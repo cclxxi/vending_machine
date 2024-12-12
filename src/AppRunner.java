@@ -1,5 +1,7 @@
+package src;
+
 import enums.ActionLetter;
-import model.*;
+import src.model.*;
 import util.UniversalArray;
 import util.UniversalArrayImpl;
 
@@ -7,7 +9,7 @@ import java.util.Scanner;
 
 public class AppRunner {
 
-    private final UniversalArray<Product> products = new UniversalArrayImpl<>();
+    private final UniversalArray<Product> products = (UniversalArray<Product>) new UniversalArrayImpl<>();
 
     private final CoinAcceptor coinAcceptor;
 
@@ -38,14 +40,14 @@ public class AppRunner {
 
         print("Монет на сумму: " + coinAcceptor.getAmount());
 
-        UniversalArray<Product> allowProducts = new UniversalArrayImpl<>();
+        UniversalArray<Product> allowProducts = (UniversalArray<Product>) new UniversalArrayImpl<>();
         allowProducts.addAll(getAllowedProducts().toArray());
         chooseAction(allowProducts);
 
     }
 
     private UniversalArray<Product> getAllowedProducts() {
-        UniversalArray<Product> allowProducts = new UniversalArrayImpl<>();
+        UniversalArray<Product> allowProducts = (UniversalArray<Product>) new UniversalArrayImpl<>();
         for (int i = 0; i < products.size(); i++) {
             if (coinAcceptor.getAmount() >= products.get(i).getPrice()) {
                 allowProducts.add(products.get(i));
