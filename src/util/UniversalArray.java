@@ -1,4 +1,4 @@
-package util;
+package src.util;
 
 public interface UniversalArray<T> {
     void add(T element);

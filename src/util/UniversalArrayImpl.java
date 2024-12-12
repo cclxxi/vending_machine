@@ -1,8 +1,8 @@
-package util;
+package src.util;
 
 import java.util.Arrays;
 
-public class UniversalArrayImpl<T> implements UniversalArray<T> {
+public class UniversalArrayImpl<T> implements util.UniversalArray<T> {
     private Object[] array;
 
     public UniversalArrayImpl(T[] a) {
